@@ -1,15 +1,11 @@
 package tp6suite;
 
-import static tp6suite.Notes.matriceSaisie;
-import static tp6suite.Notes.multiplie;
-import static tp6suite.Notes.remplirMatrice;
-import static tp6suite.Notes.testNotes;
 
 
 public class TP6Suite {
 
     public static void main(String[] args) {
-        
+
 //         String[] preNom = {"Leila", "Kader", "Richard", "Pablo",
 //        "Guillaume", "Fethi", "Garance", "Charles", "Sébastien", "Eric",
 //        "Jose-Luis"};
@@ -34,7 +30,22 @@ public class TP6Suite {
 //testNotes();
 //remplirMatrice(3,4);
 //matriceSaisie();
-multiplie();
-    }
+//multiplie();
 
+        int arr[] = {84, 12, 1, 43, 5, 10};
+
+//        System.out.println("---Avant le tri a bulle---"); 
+//    
+//        affiche(arr);
+// 
+//        // tri des elements de tableau avec le tri a bulle
+//        trier(arr);
+// 
+//        System.out.println("---Apres le tri a bulle---");  
+//    
+//        affiche(arr); 
+        Trier.trierSelec(arr);
+        
+        Trier.affiche(arr);
+    }
 }

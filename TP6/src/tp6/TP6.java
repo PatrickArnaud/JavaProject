@@ -5,9 +5,7 @@
  */
 package tp6;
 
-import static tp6.Exercice1.IntroExo1;
 import static tp6.Exercice1.Saisie;
-import static tp6.Exercice1.Calcul;
 import static tp6.Exercice2.AfficheMoyenne;
 import static tp6.Exercice2.CalculMoy;
 import static tp6.Exercice2.IntroExo2;
@@ -23,17 +21,17 @@ public class TP6 {
     public static void main(String[] args) {
 
 //      lancement exo1
-//        IntroExo1();
-//        Calcul(Saisie());
+//        Exercice1.IntroExo1();
+//        Exercice1.Calcul(Saisie());
 //        lancement exo2
-//        IntroExo2();
-//        afficherLesNotes();
-//        AfficheMoyenne(CalculMoy());1
-//        auDessusEnDesoous(CalculMoy());
+        IntroExo2();
+        afficherLesNotes();
+        AfficheMoyenne(CalculMoy());
+        auDessusEnDesoous(CalculMoy());
 //        lancement exo3
 //        IntroExo3();
 //        Calcul3(Saisie3());
-        Saisie4();
+//        Saisie4();
     }
 
 }
