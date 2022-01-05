@@ -33,9 +33,8 @@ public class Exercice1 {
             chiffres = sc.nextInt();
             TableauDeChiffre[j] = chiffres;
         }
-//        System.out.println(Arrays.toString(TableauDeChiffre));
+        System.out.println(Arrays.toString(TableauDeChiffre));
         return TableauDeChiffre;
-
     }
 
     public static void LireTableau(int[] saisie) {
@@ -44,11 +43,11 @@ public class Exercice1 {
             System.out.println(j);
         }
         String affichage = Arrays.toString(saisie);
-//        System.out.println(" contenu du tableau " + affichage);
+        System.out.println(" contenu du tableau " + affichage);
     }
 
     public static void Calcul(int[] saisie) {
-        int somme = 0;
+        float somme = 0;
         for (int i = 0; i < saisie.length; i++) {
             int j = saisie[i];
             somme = somme + j;
@@ -68,6 +67,7 @@ public class Exercice1 {
         }
         System.out.print("\nValeur minimale = " + maxVal);
         System.out.print("\nValeur maximale = " + minVal);
+        System.out.println("");
     }
 
 }
