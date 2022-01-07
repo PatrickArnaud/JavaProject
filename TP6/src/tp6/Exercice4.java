@@ -27,13 +27,13 @@ public class Exercice4 {
         Scanner sc = new Scanner(System.in);
         System.out.println(" combien de valeur souhaitez vous saisir ?   (0 pour arreter)");
         int longueur = sc.nextInt();
-        int[] tab = new int[longueur] ;
-        
+        int[] tab = new int[longueur];
+
         for (int i = 0; i < longueur; i++) {
             Scanner donne = new Scanner(System.in);
             int saisie = donne.nextInt();
-            if (saisie!=0) {
-                            tab[i] = saisie;
+            if (saisie != 0) {
+                tab[i] = saisie;
             } else {
                 i = longueur;
             }

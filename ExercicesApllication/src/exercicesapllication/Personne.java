@@ -17,11 +17,6 @@ public class Personne {
         return nom;
     }
 
-    @Override
-    public String toString() {
-        return "Personne{" + "nom=" + nom + ", prenom=" + prenom + ", adresse=" + adresse + ", ville=" + ville + ", codePostal=" + codePostal + ", age=" + age + '}';
-    }
-
     public void setNom(String nom) {
         this.nom = nom;
     }

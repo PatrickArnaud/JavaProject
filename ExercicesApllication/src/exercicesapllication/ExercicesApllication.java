@@ -9,8 +9,7 @@ public class ExercicesApllication {
      */
     public static void main(String[] args) {
 
-        Exercice1.intro();
-        Personne.saisie();
+        Exercice3.saisie();
         
         
         
