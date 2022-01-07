@@ -1,11 +1,9 @@
-
 package exercicesapllication;
 
 import java.util.Scanner;
 
-
 public class Exercice2 {
-  
+
     public String getNom() {
         return nom;
     }
@@ -75,6 +73,7 @@ public class Exercice2 {
         Scanner sc = new Scanner(System.in);
         int nombreDePersonne;
         nombreDePersonne = sc.nextInt();
+        
 
         Personne[] tableau = new Personne[nombreDePersonne];
         for (int i = 0; i < nombreDePersonne; i++) {
@@ -108,12 +107,24 @@ public class Exercice2 {
             tableau[i] = personne;
 
         }
+        int tampon = 0;
+        int index = 0;
+        
         for (int i = 0; i < tableau.length; i++) {
-            System.out.println(tableau[i].toString());
-
+            if (tampon < tableau[i].getAge()) {
+                tampon = tableau[i].getAge();
+                index = i;
+            }
         }
+        System.out.println("plus vieux " + tableau[index].getNom());
+        
+        for (int i = 0; i < tableau.length; i++) {
+            if (tampon > tableau[i].getAge()) {
+                tampon = tableau[i].getAge();
+                index = i;
+            }
+        }        
+        System.out.println("plus jeune " + tableau[index].getNom());
     }
 
 }
-
-

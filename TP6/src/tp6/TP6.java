@@ -24,14 +24,14 @@ public class TP6 {
 //        Exercice1.IntroExo1();
 //        Exercice1.Calcul(Saisie());
 //        lancement exo2
-        IntroExo2();
-        afficherLesNotes();
-        AfficheMoyenne(CalculMoy());
-        auDessusEnDesoous(CalculMoy());
+//        IntroExo2();
+//        afficherLesNotes();
+//        AfficheMoyenne(CalculMoy());
+//        auDessusEnDesoous(CalculMoy());
 //        lancement exo3
 //        IntroExo3();
 //        Calcul3(Saisie3());
-//        Saisie4();
+        Saisie4();
     }
 
 }
