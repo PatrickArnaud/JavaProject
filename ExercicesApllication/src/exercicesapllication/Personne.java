@@ -72,48 +72,52 @@ public class Personne {
 
     }
 
-    public static void saisie() {
-        System.out.println("saissisez le nombre de personne à saisir");
-        Scanner sc = new Scanner(System.in);
-        int nombreDePersonne;
-        nombreDePersonne = sc.nextInt();
-
-        Personne[] tableau = new Personne[nombreDePersonne];
-        for (int i = 0; i < nombreDePersonne; i++) {
-
-            sc.nextLine();
-            Personne personne = new Personne();
-            System.out.println("saissisez le nom");
-            String nom = sc.nextLine();
-            personne.setNom(nom);
-
-            System.out.println("saissisez le prenom");
-            String prenom = sc.nextLine();
-            personne.setPrenom(prenom);
-
-            System.out.println("saissisez l'adresse");
-            String adresse = sc.nextLine();
-            personne.setAdresse(adresse);
-
-            System.out.println("saissisez la ville");
-            String ville = sc.nextLine();
-            personne.setVille(ville);
-            sc.nextLine();
-
-            System.out.println("saissisez le CP");
-            int codePostal = sc.nextInt();
-            personne.setCodePostal(codePostal);
-
-            System.out.println("saissisez l'age");
-            int age = sc.nextInt();
-            personne.setAge(age);
-            tableau[i] = personne;
-
-        }
-        for (int i = 0; i < tableau.length; i++) {
-            System.out.println(tableau[i].toString());
-
-        }
-    }
+//    public static void saisie() {
+//        System.out.println("saissisez le nombre de personne à saisir");
+//        Scanner sc = new Scanner(System.in);
+//        int nombreDePersonne;
+//        nombreDePersonne = sc.nextInt();
+//
+//        Personne[] tableau = new Personne[nombreDePersonne];
+//        for (int i = 0; i < nombreDePersonne; i++) {
+//
+//            sc.nextLine();
+//            Personne personne = new Personne();
+//            System.out.println("saissisez le nom");
+//            String nom = sc.nextLine();
+//            personne.setNom(nom);
+//
+//            System.out.println("saissisez le prenom");
+//            String prenom = sc.nextLine();
+//            personne.setPrenom(prenom);
+//
+//            System.out.println("saissisez l'adresse");
+//            String adresse = sc.nextLine();
+//            personne.setAdresse(adresse);
+//
+//            System.out.println("saissisez la ville");
+//            String ville = sc.nextLine();
+//            personne.setVille(ville);
+//            sc.nextLine();
+//
+//            System.out.println("saissisez le CP");
+//            int codePostal = sc.nextInt();
+//            personne.setCodePostal(codePostal);
+//
+//            System.out.println("saissisez l'age");
+//            int age = sc.nextInt();
+//            personne.setAge(age);
+//            tableau[i] = personne;
+//
+//        }
+//        for (int i = 0; i < tableau.length; i++) {
+//            System.out.println(tableau[i].toString());
+//
+//        }
+//    }
+    
+     public static void bu() {
+         
+     }
 
 }

@@ -21,7 +21,6 @@ public class Exercice3 {
         ArrayList<Personne> arraylist = new ArrayList<>();
         System.out.println("voulez vous rentrer saisir une personne?");
         test = sc.nextLine();
-
         do {
             if (test.equals("oui")) {
                 Personne personne = new Personne();
@@ -40,8 +39,7 @@ public class Exercice3 {
                 System.out.println("saissisez la ville");
                 String ville = sc.nextLine();
                 personne.setVille(ville);
-                sc.nextLine();
-
+//                sc.nextLine();
                 System.out.println("saissisez le CP");
                 int codePostal = sc.nextInt();
                 personne.setCodePostal(codePostal);
@@ -49,7 +47,7 @@ public class Exercice3 {
                 System.out.println("saissisez l'age");
                 int age = sc.nextInt();
                 personne.setAge(age);
-                
+
                 sc.nextLine();
                 arraylist.add(personne);
 
@@ -58,26 +56,32 @@ public class Exercice3 {
             }
 
         } while (test.equals("oui"));
-    }
-}
+        for (int i = 0; i < arraylist.size(); i++) {
+            Personne laPersonne = arraylist.get(i);
+            affiche(laPersonne);   
 
-//        int tampon = 0;
-//        int index = 0;
-//
-//        for (int i = 0; i < tableau.length; i++) {
-//            if (tampon < tableau[i].getAge()) {
-//                tampon = tableau[i].getAge();
-//                index = i;
-//            }
-//        }
-//        System.out.println("plus vieux " + tableau[index].getNom());
-//
-//        for (int i = 0; i < tableau.length; i++) {
-//            if (tampon > tableau[i].getAge()) {
-//                tampon = tableau[i].getAge();
-//                index = i;
-//            }
-//        }
-//        System.out.println("plus jeune " + tableau[index].getNom());
-//    }
+        }
+    }
+    
+    public static void affiche(Personne laPersonne) {
+       
+            String nom = laPersonne.getNom();
+            String prenom = laPersonne.getPrenom();
+            String adresse = laPersonne.getAdresse();
+            String ville = laPersonne.getVille();
+            int cp = laPersonne.getCodePostal();
+            int age = laPersonne.getAge();
+            System.out.println("nom : " + nom);
+            System.out.println("prenom : " + prenom);
+            System.out.println("adresse : " + adresse);
+            System.out.println("ville : " + ville);
+            System.out.println("code postal : " + cp);
+            System.out.println("age : " + age);
+
+        }
+    }
+
+
+
+
 
