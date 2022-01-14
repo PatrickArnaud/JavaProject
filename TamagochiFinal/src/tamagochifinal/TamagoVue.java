@@ -333,10 +333,7 @@ public class TamagoVue extends javax.swing.JFrame {
 
         kiki = new Tamagochi(10, 10, 10, 10, 10, 10, 0, true);
         texte.setText("Bienvenue dans Tamagochi v 2.0 !    Kiki est impatient que vous vous occupiez de lui !");
-        faimAffiche.setText(kiki.getFaimAffiche());
-        soifAffiche.setText(kiki.getSoifAffiche());
-        energieAffiche.setText(kiki.getEnergieAffiche());
-        poidAffiche.setText(kiki.getPoidAffiche());
+        majAffiche();
         JFrame frame = new JFrame("animation");
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setSize(500, 400);
@@ -361,7 +358,7 @@ public class TamagoVue extends javax.swing.JFrame {
                 majAffiche();
                 mort();
             }
-            if (kiki!= null) {
+            if (kiki != null) {
                 JFrame frame = new JFrame("animation");
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.setSize(500, 400);
@@ -389,7 +386,7 @@ public class TamagoVue extends javax.swing.JFrame {
                 majAffiche();
                 mort();
             }
-            if (kiki!= null) {
+            if (kiki != null) {
                 JFrame frame = new JFrame("animation");
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.setSize(500, 400);
@@ -418,7 +415,7 @@ public class TamagoVue extends javax.swing.JFrame {
                 mort();
 
             }
-            if (kiki!= null) {
+            if (kiki != null) {
                 JFrame frame = new JFrame("animation");
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.setSize(500, 400);
@@ -446,7 +443,7 @@ public class TamagoVue extends javax.swing.JFrame {
                 majAffiche();
                 mort();
             }
-            if (kiki!= null) {
+            if (kiki != null) {
                 JFrame frame = new JFrame("animation");
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.setSize(500, 400);
@@ -474,7 +471,7 @@ public class TamagoVue extends javax.swing.JFrame {
                 majAffiche();
                 mort();
             }
-            if (kiki!= null) {
+            if (kiki != null) {
                 JFrame frame = new JFrame("animation");
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.setSize(500, 400);
@@ -527,14 +524,26 @@ public class TamagoVue extends javax.swing.JFrame {
         JLabel jlabel = new JLabel(icone, JLabel.CENTER);
         frame.getContentPane().add(jlabel);
         frame.validate();
+
     }
 
     void majSlide() {
-        faimSlide.setValue(kiki.getFaim());
-        soifSlide.setValue(kiki.getSoif());
-        bonheurSlide.setValue(kiki.getBonheur());
-        energieSlide.setValue(kiki.getEnergie());
-        ageSlide.setValue(kiki.getAge());
+        if (kiki.isAlive()) {
+            faimSlide.setValue(kiki.getFaim());
+            soifSlide.setValue(kiki.getSoif());
+            poidSlide.setValue(kiki.getPoid());
+            bonheurSlide.setValue(kiki.getBonheur());
+            energieSlide.setValue(kiki.getEnergie());
+            ageSlide.setValue(kiki.getAge());
+        } else {
+            faimSlide.setValue(0);
+            soifSlide.setValue(0);
+            poidSlide.setValue(0);
+            bonheurSlide.setValue(0);
+            energieSlide.setValue(0);
+            ageSlide.setValue(0);
+        }
+
     }
 
     public static void main(String args[]) {
