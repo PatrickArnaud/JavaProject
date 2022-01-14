@@ -73,7 +73,7 @@ public class Creature {
      * @faim
      * @soif
      * @taille
-     * @alive (bool)    
+     * @alive (bool)
      */
     public Creature(int energie, int poid, int faim, int soif, int taille, boolean alive) {
         this.energie = energie;
@@ -84,22 +84,81 @@ public class Creature {
         this.alive = alive;
     }
 
-    private void dort() {
-        this.setEnergie(10);
-        System.out.println("hummmf grrrrr!! (Kiki à bien dormi il se réveille");
+    public String getEnergieAffiche() {
+        int energie = this.getEnergie();
+        String energieAffiche = Integer.toString(energie);
+        return energieAffiche;
     }
 
-    private void mange() {
+    public String getSoifAffiche() {
+        int soif = this.getSoif();
+        String soifAffiche = Integer.toString(soif);
+        return soifAffiche;
+    }
+
+    public String getFaimAffiche() {
+        int faim = this.getFaim();
+        String faimAffiche = Integer.toString(faim);
+        return faimAffiche;
+    }
+
+    public String getPoidAffiche() {
+        int poid = this.getPoid();
+        String poidAffiche = Integer.toString(poid);
+        return poidAffiche;
+    }
+
+    void dort() {
+        this.setEnergie(10);
+        this.setFaim(this.getFaim() - 2);
+        this.setSoif(this.getSoif() - 2); 
+        
+    }
+
+    void mange() {
         this.setFaim(10);
         this.setPoid(this.getPoid() + 1);
-        this.setEnergie(this.getEnergie() - 1);
-        System.out.println("hummmf grrrrr!! (Kiki à bien mangé, il n'as plus faim !");
+        this.setEnergie(this.getEnergie() - 1);       
     }
 
-    private void bois() {
+    void bois() {
         this.setSoif(10);
         this.setEnergie(this.getEnergie() - 1);
-        System.out.println("hummmf grrrrr!! (Kiki à bien bu, il n'as plus soif !");
+        this.setFaim(this.getFaim() - 1);      
     }
 
+    void sport() {
+        this.setPoid(this.getPoid() - 4);
+        this.setSoif(this.getSoif() - 2);
+        this.setEnergie(this.getEnergie() - 2);
+        this.setFaim(this.getFaim() - 2);
+    }
+
+    boolean checkAlive() {
+        if (poid > 15) {
+            this.setAlive(false);
+        } else if (energie == 0) {
+            this.setAlive(false);
+        } else if (soif == 0) {
+            this.setAlive(false);
+        } else if (poid <= 0) {
+            this.setAlive(false);
+        }
+        return this.isAlive(); 
+    }
+    
+    String causeDc() {
+        String causeDeMort="";
+         if (poid > 15) {
+             causeDeMort = "oups kiki est mort de surpoid";
+        } else if (energie == 0) {
+             causeDeMort = "oups kiki est mort de fatigue";
+        } else if (soif <= 0) {
+             causeDeMort = "oups kiki est mort de soif";
+        } else if (poid <= 0) {
+             causeDeMort = "oups kiki est mort de malnutrition";
+        }       
+        return causeDeMort;        
+    }
+    
 }
